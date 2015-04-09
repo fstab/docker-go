@@ -6,7 +6,7 @@ Test [go](https://golang.org) programs in a Linux container.
 Run from Docker Hub
 -------------------
 
-The [fstab/go](https://registry.hub.docker.com/u/fstab/go) image contains a [go](https://golang.org) build environment and can be used to compile and run [go](https://golang.org) applications in a Linux container.
+The [fstab/go](https://registry.hub.docker.com/u/fstab/go) image contains a [go](https://golang.org) build environment and can be used to compile, run, and test [go](https://golang.org) applications in a Linux container.
 
 If the `GOPATH` environment variable is set correctly on the host system, [fstab/go](https://registry.hub.docker.com/u/fstab/go) can be run as follows:
 
@@ -14,7 +14,7 @@ If the `GOPATH` environment variable is set correctly on the host system, [fstab
 docker run -v $GOPATH:/home/go -t -i fstab/go
 ```
 
-This will launch a shell in the container, with the `go` command available and the `GOPATH` mapped to `/home/go`.
+This will pull the image from docker hub, start the container, and launch a shell with the `go` command available and the `GOPATH` mapped to `/home/go`.
 
 Build from Source
 -----------------
