@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM ubuntu:15.04
 MAINTAINER Fabian Stäber, fabian@fstab.de
 
 RUN apt-get update && \
@@ -16,6 +16,7 @@ RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 RUN apt-get install -y \
     curl \
+    git \
     vim
 
 RUN mkdir /usr/local/go && \
