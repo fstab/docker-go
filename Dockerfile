@@ -28,5 +28,6 @@ WORKDIR /home/go
 USER go
 
 ENV GOROOT /usr/local/go
-ENV PATH=$GOROOT/bin:$PATH
+ENV PATH="$GOROOT/bin:$PATH"
 ENV GOPATH /home/go
+ENV PATH="$GOPATH/bin:$PATH"
