@@ -1,6 +1,8 @@
 FROM ubuntu:15.04
 MAINTAINER Fabian Stäber, fabian@fstab.de
 
+ENV LAST_UPDATE=2015-09-25
+
 RUN apt-get update && \
     apt-get upgrade -y
 
@@ -20,7 +22,7 @@ RUN apt-get install -y \
     vim
 
 RUN mkdir /usr/local/go && \
-    curl https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz | \
+    curl https://storage.googleapis.com/golang/go1.5.1.linux-amd64.tar.gz | \
     tar xvzf - -C /usr/local/go --strip-components=1
 
 RUN adduser --disabled-login --gecos '' go
